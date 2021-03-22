@@ -87,6 +87,22 @@
                 <p><strong>rmdir</strong>: If you need to delete a directory, use the rmdir command. However, rmdir only
                     allows you to delete empty directories.</p>
                 <p><strong>man</strong>: man command provides manual for the help of command.</p>
+                <h1 class="mt-5">How to log into your docker container:</h1>
+                <p>Once you have Docker installed and running properly, which can be tested using the hello-world image
+                    that is already prebuild, you will need to pull an Ubuntu image from Dockerhub. This image can be
+                    used to do a plethora of different tasks, but one that can be of use is hosting an apache webserver.
+                    I will discuss how to log into your Docker container that is running Ubuntu Linux below.</p>
+                <p>Step 1: Pull an Ubuntu image by using the command "docker pull ubuntu".</p>
+                <p><img src="Images/Pull_ubuntu.png" alt="Pull ubuntu image"
+                        width="600" height="223"></p>
+                <p>Step 2: Check to see that your Ubuntu image is downloaded and installed by using the command "docker
+                    images".</p>
+                <p><img src="Images/Ubuntu_image.png" alt="Docker images"
+                        width="700" height="105"></p>
+                <p>Step 3: Use the command "docker run -it ubuntu:latest /bin/bash" to log into your Docker container
+                    that is running Ubuntu Linux with the bash shell.</p>
+                <p><img src="Images/Run_ubuntu_image.png" alt="Run ubuntu image"
+                        width="690" height="60"></p>
             </div>
         </main>
     </div>

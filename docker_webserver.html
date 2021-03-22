@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Brief introduction of Docker">
+    <meta name="author" content="Zarana Bhalala">
+    <meta name="generator" content="Hugo 0.80.0">
+    <meta name="theme-color" content="#7952b3">
+    <title>Webserver using Docker</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+</head>
+
+<body class="d-flex flex-column h-100">
+<header>
+    <!-- navbar menu -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Virtualization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Containerization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Virtualization vs. Containerization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Webserver using Docker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Basic Linux Commands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Connect Docker with Pycharm</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<section class="py-5 align-text-bottom container">
+    <div class="col-lg-10 col-md-8 mx-auto">
+        <main class="flex-shrink-0">
+            <div class="container">
+                <h1 class="mt-5">A tutorial on how to setup a web server on your local computer using docker</h1>
+                <p>Docker is the delivery of environments, and we can also use these predefined environments to run
+                    specific programs, such as Ubuntu and Apache (a server end program). Docker is a sort of flexible
+                    “virtual machine”, providing the minimum environment for your programs, and the environment has
+                    little relationship with the host/local physical machine.</p>
+                <p>Let’s see how we can build a web server image which can be used to build containers. In our example,
+                    we are going to use the Apache Web Server on Ubuntu to build our image.
+                </p>
+                <h3><strong>Tutorial resources and steps:</strong></h3>
+                <h4>1. Install Docker Engine</h4>
+                <a href="https://docs.docker.com/engine/install/">https://docs.docker.com/engine/install/</a>
+                <br><a href="https://docs.docker.com/get-docker/">https://docs.docker.com/get-docker/</a>
+                <p>Once you are done installing Docker, test your Docker installation by running the “Docker run
+                    hello-world” command. Below is a screenshot when run this command successfully on Mac OS.</p>
+                <p><img src="Images/Docker_hello-world.png" alt="Docker hello-world"
+                        width="600" height="359"></p>
+                <h4>2. Pull an Ubuntu image from Dockerhub.</h4>
+                <a href="https://docs.docker.com/engine/reference/commandline/pull/">https://docs.docker.com/engine/reference/commandline/pull/</a>
+                <p>To install Ubuntu run the "docker pull ubuntu" command as seen below.</p>
+                <p><img src="Images/Pull_ubuntu.png" alt="Pull ubuntu image"
+                        width="600" height="223"></p>
+                <p>The pull command fetches the ubuntu image from the Docker registry and saves it to our system. You
+                    can use the “docker images” command to see a list of all images on your system. This command shows
+                    us all Docker images present but in this case, we are specifically looking to verify the presence of
+                    the "ubuntu" Repository that has the "latest" Tag.</p>
+                <p><img src="Images/Ubuntu_image.png" alt="Docker images"
+                        width="700" height="105"></p>
+                <h4>3. How to Commit Changes to A Docker Image with Examples</h4>
+                <a href="https://phoenixnap.com/kb/how-to-commit-changes-to-docker-image">https://phoenixnap.com/kb/how-to-commit-changes-to-docker-image</a>
+                <p>Run the Ubuntu image to start a Docker container using “docker run -it ubuntu:latest /bin/bash”, then
+                    log into this Ubuntu container. Parameter “-it” of Docker brings you an interactive shell to
+                    communicate with the “virtual machine”.</p>
+                <p><img src="Images/Run_ubuntu_image.png" alt="Run ubuntu image"
+                        width="690" height="60"></p>
+                <p>The container ID is “bee263223c67” in the screenshot. Before we install Apache itself, we will want
+                    to make sure all of the packages pre-installed in the
+                    Ubuntu image are up to date. To do this, we will run the "apt-get update" command.</p>
+                <p><img src="Images/Update_ubuntu.png" alt="Update ubuntu"
+                        width="600" height="264"></p>
+                <p>This will go through and automatically update any packages that need updates. Once that is complete,
+                    we can actually install the two packages we need. First will be "apt-get install apache2"
+                    command.</p>
+                <p><img src="Images/Install_apache2.png" alt="Install Apache2"
+                        width="600" height="293"></p>
+                <p>Next, we will install the VIM text editor via the "apt-get install vim" command.</p>
+                <p><img src="Images/Install_vim.png" alt="Install Vim"
+                        width="593" height="140"></p>
+                <p>Now Exit Ubuntu container.</p>
+                <p><img src="Images/exit_ubuntu.png" alt="Exit ubuntu"
+                        width="300" height="50"></p>
+                <p>To commit your ubuntu repository to a new image, you will want to first verify the current image
+                    Container ID. To this do, run the "docker ps -a" command.</p>
+                <p><img src="Images/Container_ID.png" alt="Container ID"
+                        width="972" height="55"></p>
+                <p>In the example above, the Container ID is bee263223c67. We can now run the following command to
+                    create a new repository: "docker commit [containerID] [repositoryName]"</p>
+                <p><img src="Images/Docker_commit.png" alt="Docker commit"
+                        width="612" height="48"></p>
+                <p>Check the new images using “docker images”.</p>
+                <p><img src="Images/New_docker_image.png" alt="New Docker image"
+                        width="815" height="72"></p>
+                <h4>4. Docker Basics: How to Share Data Between a Docker Container and Host</h4>
+                <a href="https://thenewstack.io/docker-basics-how-to-share-data-between-a-docker-container-and-host/">https://thenewstack.io/docker-basics-how-to-share-data-between-a-docker-container-and-host/</a>
+                <p>To mount a local storage location to your Ubuntu container, run the following command: "docker run
+                    -it -p 127.0.0.1:80:80 -v [localFilePath]:/var/www/html [repositoryName] /bin/bash"</p>
+                <p>Parameter explanation:
+                    <br>1) -it: log into an interactive shell
+                    <br>2) -p: expose a port of Docker container.
+                    <br>3) -v: bind a host directory to Docker container. “LocalFilePath” is a directory of the host
+                    computer, and “/var/www/htm” is the default location for the entry webpage of a website. Usually we
+                    put “index. Html” is this directory.</p>
+                <p><img src="Images/Data_share.png" alt="Data share between docker container and host"
+                        width="972" height="31"></p>
+                <h4>5. vi Editor in UNIX</h4>
+                <a href="https://www.geeksforgeeks.org/vi-editor-unix/">https://www.geeksforgeeks.org/vi-editor-unix/</a>
+                <p>Create an “index.html” file using vi editor in “/var/www/htm” directory. Press the "i" key to enter
+                    Insert Mode. You should see "-- INSERT --" across the bottom of the screen. Once in Insert Mode, you
+                    can now enter the following HTML code. Whenever the file is complete, press the "ESC" key to exit
+                    Insert Mode. Type ":wq" to write to file and quit the VIM editor.</p>
+                <p><img src="Images/Sample_code.png" alt="Sample code for index.html"
+                        width="600" height="321"></p>
+                <p>Meanwhile, you can find your “index.html” in your bind directory on your computer.</p>
+                <h4>6. How to use Docker to host a website.</h4>
+                <p>You can run the following command to start your Apache Webserver: "/etc/init.d/apache2restart”</p>
+                <p><img src="Images/Restart_apache2.png" alt="Restart Apache2"
+                        width="974" height="68"></p>
+                <p>Now you can open a web browser on your local machine and navigate to 127.0.0.1 (your local host) to
+                    verify everything is running.</p>
+                <p><img src="Images/Final_Output.png" alt="Hello World in browser"
+                        width="600" height="267"></p>
+            </div>
+        </main>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

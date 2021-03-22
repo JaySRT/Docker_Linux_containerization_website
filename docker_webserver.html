@@ -83,10 +83,45 @@
                 <p><img src="Images/Pull_ubuntu.png" alt="Pull ubuntu image"
                         width="600" height="223"></p>
                 <p>The pull command fetches the ubuntu image from the Docker registry and saves it to our system. You
-                    can use the “docker images” command to see a list of all images on your system.</p>
+                    can use the “docker images” command to see a list of all images on your system. This command shows
+                    us all Docker images present but in this case, we are specifically looking to verify the presence of
+                    the "ubuntu" Repository that has the "latest" Tag.</p>
                 <p><img src="Images/Ubuntu_image.png" alt="Docker images"
                         width="700" height="105"></p>
-
+                <h4>3. How to Commit Changes to A Docker Image with Examples</h4>
+                <a href="https://phoenixnap.com/kb/how-to-commit-changes-to-docker-image">https://phoenixnap.com/kb/how-to-commit-changes-to-docker-image</a>
+                <p>Run the Ubuntu image to start a Docker container using “docker run -it ubuntu:latest /bin/bash”, then
+                    log into this Ubuntu container. Parameter “-it” of Docker brings you an interactive shell to
+                    communicate with the “virtual machine”.</p>
+                <p><img src="Images/Run_ubuntu_image.png" alt="Run ubuntu image"
+                        width="690" height="60"></p>
+                <p>The container ID is “bee263223c67” in the screenshot. Before we install Apache itself, we will want
+                    to make sure all of the packages pre-installed in the
+                    Ubuntu image are up to date. To do this, we will run the "apt-get update" command.</p>
+                <p><img src="Images/Update_ubuntu.png" alt="Update ubuntu"
+                        width="600" height="264"></p>
+                <p>This will go through and automatically update any packages that need updates. Once that is complete,
+                    we can actually install the two packages we need. First will be "apt-get install apache2"
+                    command.</p>
+                <p><img src="Images/Install_apache2.png" alt="Install Apache2"
+                        width="600" height="293"></p>
+                <p>Next, we will install the VIM text editor via the "apt-get install vim" command.</p>
+                <p><img src="Images/Install_vim.png" alt="Install Vim"
+                        width="593" height="140"></p>
+                <p>Now Exit Ubuntu container.</p>
+                <p><img src="Images/exit_ubuntu.png" alt="Exit ubuntu"
+                        width="300" height="50"></p>
+                <p>To commit your ubuntu repository to a new image, you will want to first verify the current image
+                    Container ID. To this do, run the "docker ps -a" command.</p>
+                <p><img src="Images/Container_ID.png" alt="Container ID"
+                        width="972" height="55"></p>
+                <p>In the example above, the Container ID is bee263223c67. We can now run the following command to
+                    create a new repository: "docker commit [containerID] [repositoryName]"</p>
+                <p><img src="Images/Docker_commit.png" alt="Docker commit"
+                        width="612" height="48"></p>
+                <p>Check the new images using “docker images”.</p>
+                <p><img src="Images/New_docker_image.png" alt="New Docker image"
+                        width="815" height="72"></p>
             </div>
         </main>
     </div>

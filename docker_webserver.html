@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Brief introduction of Docker">
+    <meta name="author" content="Zarana Bhalala">
+    <meta name="generator" content="Hugo 0.80.0">
+    <meta name="theme-color" content="#7952b3">
+    <title>Webserver using Docker</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+</head>
+
+<body class="d-flex flex-column h-100">
+<header>
+    <!-- navbar menu -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Virtualization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Containerization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Virtualization vs. Containerization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Webserver using Docker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Basic Linux Commands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Connect Docker with Pycharm</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<section class="py-5 align-text-bottom container">
+    <div class="col-lg-10 col-md-8 mx-auto">
+        <main class="flex-shrink-0">
+            <div class="container">
+                <h1 class="mt-5">A tutorial on how to setup a web server on your local computer using docker</h1>
+                <p>Docker is the delivery of environments, and we can also use these predefined environments to run
+                    specific programs, such as Ubuntu and Apache (a server end program). Docker is a sort of flexible
+                    “virtual machine”, providing the minimum environment for your programs, and the environment has
+                    little relationship with the host/local physical machine.</p>
+                <p>Let’s see how we can build a web server image which can be used to build containers. In our example,
+                    we are going to use the Apache Web Server on Ubuntu to build our image.
+                </p>
+                <h3><strong>Tutorial resources and steps:</strong></h3>
+                <h4>1. Install Docker Engine</h4>
+                <a href="https://docs.docker.com/engine/install/">https://docs.docker.com/engine/install/</a>
+                <br><a href="https://docs.docker.com/get-docker/">https://docs.docker.com/get-docker/</a>
+                <p>Once you are done installing Docker, test your Docker installation by running the “Docker run
+                    hello-world” command. Below is a screenshot when run this command successfully on Mac OS.</p>
+                <p><img src="Images/Docker_hello-world.png" alt="Docker hello-world"
+                        width="600" height="359"></p>
+                <h4>2. Pull an Ubuntu image from Dockerhub.</h4>
+                <a href="https://docs.docker.com/engine/reference/commandline/pull/">https://docs.docker.com/engine/reference/commandline/pull/</a>
+                <p>To install Ubuntu run the "docker pull ubuntu" command as seen below.</p>
+                <p><img src="Images/Pull_ubuntu.png" alt="Pull ubuntu image"
+                        width="600" height="223"></p>
+                <p>The pull command fetches the ubuntu image from the Docker registry and saves it to our system. You
+                    can use the “docker images” command to see a list of all images on your system.</p>
+                <p><img src="Images/Ubuntu_image.png" alt="Docker images"
+                        width="700" height="105"></p>
+
+            </div>
+        </main>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

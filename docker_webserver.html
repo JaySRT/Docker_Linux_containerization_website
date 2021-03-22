@@ -122,6 +122,35 @@
                 <p>Check the new images using “docker images”.</p>
                 <p><img src="Images/New_docker_image.png" alt="New Docker image"
                         width="815" height="72"></p>
+                <h4>4. Docker Basics: How to Share Data Between a Docker Container and Host</h4>
+                <a href="https://thenewstack.io/docker-basics-how-to-share-data-between-a-docker-container-and-host/">https://thenewstack.io/docker-basics-how-to-share-data-between-a-docker-container-and-host/</a>
+                <p>To mount a local storage location to your Ubuntu container, run the following command: "docker run
+                    -it -p 127.0.0.1:80:80 -v [localFilePath]:/var/www/html [repositoryName] /bin/bash"</p>
+                <p>Parameter explanation:
+                    <br>1) -it: log into an interactive shell
+                    <br>2) -p: expose a port of Docker container.
+                    <br>3) -v: bind a host directory to Docker container. “LocalFilePath” is a directory of the host
+                    computer, and “/var/www/htm” is the default location for the entry webpage of a website. Usually we
+                    put “index. Html” is this directory.</p>
+                <p><img src="Images/Data_share.png" alt="Data share between docker container and host"
+                        width="972" height="31"></p>
+                <h4>5. vi Editor in UNIX</h4>
+                <a href="https://www.geeksforgeeks.org/vi-editor-unix/">https://www.geeksforgeeks.org/vi-editor-unix/</a>
+                <p>Create an “index.html” file using vi editor in “/var/www/htm” directory. Press the "i" key to enter
+                    Insert Mode. You should see "-- INSERT --" across the bottom of the screen. Once in Insert Mode, you
+                    can now enter the following HTML code. Whenever the file is complete, press the "ESC" key to exit
+                    Insert Mode. Type ":wq" to write to file and quit the VIM editor.</p>
+                <p><img src="Images/Sample_code.png" alt="Sample code for index.html"
+                        width="600" height="321"></p>
+                <p>Meanwhile, you can find your “index.html” in your bind directory on your computer.</p>
+                <h4>6. How to use Docker to host a website.</h4>
+                <p>You can run the following command to start your Apache Webserver: "/etc/init.d/apache2restart”</p>
+                <p><img src="Images/Restart_apache2.png" alt="Restart Apache2"
+                        width="974" height="68"></p>
+                <p>Now you can open a web browser on your local machine and navigate to 127.0.0.1 (your local host) to
+                    verify everything is running.</p>
+                <p><img src="Images/Final_Output.png" alt="Hello World in browser"
+                        width="600" height="267"></p>
             </div>
         </main>
     </div>

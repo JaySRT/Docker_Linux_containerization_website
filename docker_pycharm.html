@@ -74,6 +74,32 @@
                     <br>• Before you start working with make sure that the Docker plugin is enabled. The plugin is
                     bundled with Pycharm and is activated by default. If the plugin is not activated, enable it on the
                     Plugins page of the Settings/Preferences dialog.</p>
+                <h3><strong>Tutorial:</strong></h3>
+                <p>1. Create a new project and add the my_script.py file into the /src directory and enter the following
+                    code:</p>
+                <p><img src="Images/Python_code.png" alt="Sample python code"
+                        width="600" height="250"></p>
+                <p>2. Create a new file and name it Dockerfile. Put the following codes into the Dockerfile:</p>
+                <p><img src="Images/Dockerfile.png" alt="Sample Docker file"
+                        width="600" height="241"></p>
+                <p>3. Open Pycharm and go to ‘Preferences->Build Execution and Deployment->Docker’
+                    <br>Click on ‘+’ to add a new docker connection
+                    <br>Click ‘OK’ to exit the window</p>
+                <p><img src="Images/Docker_connection.png" alt="Docker connection"
+                        width="600" height="443"></p>
+                <p>4. You need to click on "Add Configuration" in the top right of the IDE to add a Docker
+                    configuration. From there click on the "+" button and then click on the "Docker" dropdown.
+                    Afterwards, click on "Dockerfile" and a configuration window should appear. Fill out the directory
+                    you want to configure and the name of the Docker image. After that make, sure to check off the box
+                    that says "Run built image". When all of this is done, click "apply" and "ok".</p>
+                <p><img src="Images/Docker_configuration.png" alt="Docker configuration"
+                        width="800" height="519"></p>
+                <p>5. Now run configuration in PyCharm to execute the python script we created, using the python
+                    interpreter running on a Docker image instead of using a local interpreter.</p>
+                <p><img src="Images/Docker_run.png" alt="Output of Docker run image"
+                        width="800" height="485"></p>
+                <p>Congratulations! You have successfully created and executed your first python program on Docker using
+                    Pycharm.</p>
             </div>
         </main>
     </div>

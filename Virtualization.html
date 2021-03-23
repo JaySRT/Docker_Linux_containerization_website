@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Brief introduction of Docker">
+    <meta name="author" content="Jay Sorathiya">
+    <meta name="generator" content="Hugo 0.80.0">
+    <meta name="theme-color" content="#7952b3">
+    <title>Virtualization</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+</head>
+
+<body class="d-flex flex-column h-100">
+<header>
+    <!-- navbar menu -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Virtualization.html">Virtualization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Containerization.html">Containerization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Virtualization vs. Containerization">Virtualization vs. Containerization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Webserver using Docker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Basic Linux Commands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Connect Docker with Pycharm</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<section class="py-5 align-text-bottom container">
+    <div class="col-lg-10 col-md-8 mx-auto">
+        <main class="flex-shrink-0">
+            <div class="container">
+                <h1 class="mt-5">What is Virtualization? </h1>
+                <p>Virtualization is technology that lets you create useful IT services using resources that are
+                    traditionally bound to hardware. It allows you to use a physical machine’s full capacity by
+                    distributing its capabilities among many users or environments</p>
+                <p>In more practical terms, imagine you have 3 physical servers with individual dedicated purposes.
+                    One is a mail server, another is a web server, and the last one runs internal legacy applications.
+                    Each server is being used at about 30% capacity—just a fraction of their running potential. But
+                    since the legacy apps remain important to your internal operations, you have to keep them and the
+                    third server that hosts them, right?
+                </p>
+                <p> <img src="Images/server-usage-500x131.png" alt="Docker hello-world" width="500" height="131"></p>
+                <p> Traditionally, yes. It was often easier and more reliable to run individual tasks on individual servers: 1 server,
+                    1 operating system, 1 task. It wasn’t easy to give 1 server multiple brains. But with virtualization, you can split
+                    the mail server into 2 unique ones that can handle independent tasks so the legacy apps can be migrated. It’s the same
+                    hardware, you’re just using more of it more efficiently.
+                </p>
+                <p> <img src="Images/server-usage-for-virtualization-500x131.png" alt="Docker hello-world" width="500" height="131"> </p>
+
+                <p> Keeping security in mind, you could split the first server again so it could handle another task—increasing its use from 30%, to 60%, to 90%.
+                    Once you do that, the now empty servers could be reused for other tasks or retired altogether to reduce cooling and maintenance costs.
+                </p>
+                <h2 class="mt-5">How does it work? </h2>
+                <p> Software called hypervisors separate the physical resources from the virtual environments—the things that need those resources.
+                    Hypervisors can sit on top of an operating system (like on a laptop) or be installed directly onto hardware (like a server), which is
+                    how most enterprises virtualize. Hypervisors take your physical resources and divide them up so that virtual environments can use them.
+                </p>
+                <p> <img src="Images/how-virtualization-works-400x217.png" alt="Docker hello-world" width="400" height="217"> </p>
+                <h2 class="mt-5"> Types of Virtualization </h2>
+                <h5 class="mt-5"> Data virtualization </h5>
+                <p> Data that’s spread all over can be consolidated into a single source. Data virtualization allows companies to treat data as a dynamic supply—providing '=
+                    processing capabilities that can bring together data from multiple sources, easily accommodate new data sources, and transform data according to user needs.
+                    Data virtualization tools sit in front of multiple data sources and allows them to be treated as single source, delivering the needed data—in the required
+                    form—at the right time to any application or user.
+                </p>'=
+                <p> <img src="Images/Virtual_data_layer.png" alt="Docker hello-world" width="750" height="217"> </p>
+
+
+                <h5 class="mt-5"> Desktop virtualization </h5>
+                <p> Easily confused with operating system virtualization—which allows you to deploy multiple operating systems on a single machine—desktop virtualization allows a
+                    central administrator (or automated administration tool) to deploy simulated desktop environments to hundreds of physical machines at once. Unlike traditional
+                    desktop environments that are physically installed, configured, and updated on each machine, desktop virtualization allows admins to perform mass configurations,
+                    updates, and security checks on all virtual desktops.
+                </p>
+                <p> <img src="Images/Virtual_desktop.jpg" alt="Docker hello-world" width="750" height="500"> </p>
+
+                <h5 class="mt-5"> Server virtualization </h5>
+                <p> Servers are computers designed to process a high volume of specific tasks really well so other computers—like laptops and desktops—can do a
+                    variety of other tasks. Virtualizing a server lets it to do more of those specific functions and involves partitioning it so that the components
+                    can be used to serve multiple functions.
+                </p>
+                <p> <img src="Images/what-is-server-virtualization.png" alt="Docker hello-world" width="800" height="400"> </p>
+
+                <h5 class="mt-5"> Operating system virtualization </h5>
+                <p> Operating system virtualization happens at the kernel—the central task managers of operating systems. It’s a useful way to run Linux and Windows
+                    environments side-by-side. Enterprises can also push virtual operating systems to computers, which:
+                </p>
+                <li> Reduces bulk hardware costs, since the computers don’t require such high out-of-the-box capabilities.</li>
+                <li> Increases security, since all virtual instances can be monitored and isolated.</li>
+                <li> Limits time spent on IT services like software updates.</li>
+                <p> <img src="Images/Guest_os_diagram.jpg" alt="Docker hello-world" width="500" height="380"> </p>
+
+            </div>
+        </main>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</html<!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; Jay Sorathia & Zarana Bhalala, (Independent Developers) &middot; <a href="#">Licence and Terms</a> &middot;
+  </footer>
+</main>
+
+
+    <script src="bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>

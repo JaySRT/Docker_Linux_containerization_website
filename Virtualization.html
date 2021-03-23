@@ -82,16 +82,45 @@
                 <p> Keeping security in mind, you could split the first server again so it could handle another task—increasing its use from 30%, to 60%, to 90%.
                     Once you do that, the now empty servers could be reused for other tasks or retired altogether to reduce cooling and maintenance costs.
                 </p>
-                <h3 class="mt-5">How does it work? </h3>
+                <h2 class="mt-5">How does it work? </h2>
                 <p> Software called hypervisors separate the physical resources from the virtual environments—the things that need those resources.
                     Hypervisors can sit on top of an operating system (like on a laptop) or be installed directly onto hardware (like a server), which is
                     how most enterprises virtualize. Hypervisors take your physical resources and divide them up so that virtual environments can use them.
                 </p>
                 <p> <img src="Images/how-virtualization-works-400x217.png" alt="Docker hello-world" width="400" height="217"> </p>
+                <h2 class="mt-5"> Types of Virtualization </h2>
+                <h5 class="mt-5"> Data virtualization </h5>
+                <p> Data that’s spread all over can be consolidated into a single source. Data virtualization allows companies to treat data as a dynamic supply—providing '=
+                    processing capabilities that can bring together data from multiple sources, easily accommodate new data sources, and transform data according to user needs.
+                    Data virtualization tools sit in front of multiple data sources and allows them to be treated as single source, delivering the needed data—in the required
+                    form—at the right time to any application or user.
+                </p>'=
+                <p> <img src="Images/Virtual_data_layer.png" alt="Docker hello-world" width="750" height="217"> </p>
 
-                <p> </p>
 
+                <h5 class="mt-5"> Desktop virtualization </h5>
+                <p> Easily confused with operating system virtualization—which allows you to deploy multiple operating systems on a single machine—desktop virtualization allows a
+                    central administrator (or automated administration tool) to deploy simulated desktop environments to hundreds of physical machines at once. Unlike traditional
+                    desktop environments that are physically installed, configured, and updated on each machine, desktop virtualization allows admins to perform mass configurations,
+                    updates, and security checks on all virtual desktops.
+                </p>
+                <p> <img src="Images/Virtual_desktop.jpg" alt="Docker hello-world" width="750" height="500"> </p>
 
+                <h5 class="mt-5"> Server virtualization </h5>
+                <p> Servers are computers designed to process a high volume of specific tasks really well so other computers—like laptops and desktops—can do a
+                    variety of other tasks. Virtualizing a server lets it to do more of those specific functions and involves partitioning it so that the components
+                    can be used to serve multiple functions.
+                </p>
+                <p> <img src="Images/what-is-server-virtualization.png" alt="Docker hello-world" width="800" height="400"> </p>
+
+                <h5 class="mt-5"> Operating system virtualization </h5>
+                <p> Operating system virtualization happens at the kernel—the central task managers of operating systems. It’s a useful way to run Linux and Windows
+                    environments side-by-side. Enterprises can also push virtual operating systems to computers, which:
+                </p>
+                <li> Reduces bulk hardware costs, since the computers don’t require such high out-of-the-box capabilities.</li>
+                <li> Increases security, since all virtual instances can be monitored and isolated.</li>
+                <li> Limits time spent on IT services like software updates.</li>
+                <p> <img src="Images/Guest_os_diagram.jpg" alt="Docker hello-world" width="500" height="380"> </p>
 
             </div>
         </main>
@@ -107,5 +136,16 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
-</body>
+</html<!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; Jay Sorathia & Zarana Bhalala, (Independent Developers) &middot; <a href="#">Licence and Terms</a> &middot;
+  </footer>
+</main>
+
+
+    <script src="bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+  </body>
 </html>

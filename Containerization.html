@@ -1,10 +1,120 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="h-100">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Brief introduction of Docker">
+    <meta name="author" content="Jay Sorathiya">
+    <meta name="generator" content="Hugo 0.80.0">
+    <meta name="theme-color" content="#7952b3">
+    <title>Containerization</title>
 
-</body>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+</head>
+
+<body class="d-flex flex-column h-100">
+<header>
+    <!-- navbar menu -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Virtualization.html">Virtualization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Containerization.html">Containerization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Virtualization vs. Containerization">Virtualization vs. Containerization</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Webserver using Docker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Basic Linux Commands</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Connect Docker with Pycharm</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Begin page content -->
+<section class="py-5 align-text-bottom container">
+    <div class="col-lg-10 col-md-8 mx-auto">
+        <main class="flex-shrink-0">
+            <div class="container">
+                <h1 class="mt-5">What is Containerization? </h1>
+                <p>A standardized unit of software</p>
+                <p>Package Software into Standardized Units for Development, Shipment and Deployment
+                </p>
+
+                <p>
+                A container is a standard unit of software that packages up code and all its dependencies so the application
+                    runs quickly and reliably from one computing environment to another. A Docker container image is a lightweight,
+                    standalone, executable package of software that includes everything needed to run an application: code, runtime,
+                    system tools, system libraries and settings.
+                </p>
+
+                <p>Container images become containers at runtime and in the case of Docker containers - images become containers when they
+                    run on Docker Engine. Available for both Linux and Windows-based applications, containerized software will always run the
+                    same, regardless of the infrastructure. Containers isolate software from its environment and ensure that it works uniformly
+                    despite differences for instance between development and staging.
+                </p>
+
+                <p>Docker containers that run on Docker Engine:
+                </p>
+                <li> Standard: Docker created the industry standard for containers, so they could be portable anywhere. </li>
+                <li> Lightweight: Containers share the machine’s OS system kernel and therefore do not require an OS per application, driving higher server efficiencies and reducing server and licensing costs </li>
+                <li> Secure: Applications are safer in containers and Docker provides the strongest default isolation capabilities in the industry </li>
+                <p></p>
+
+                <p> <img src="Images/docker-containerized-appliction-blue-border_2.png" alt="Docker picture" width="600" height="500"> </p>
+                <p>Docker container technology was launched in 2013 as an open source Docker Engine. It leveraged existing computing concepts around containers
+                    and specifically in the Linux world, primitives known as cgroups and namespaces. Docker's technology is unique because it focuses on the
+                    requirements of developers and systems operators to separate application dependencies from infrastructure.</p>
+                <p> <img src="Images/Docker-Website-2018-Diagrams-071918-V5_26_Docker-today.png" alt="Docker Diagram" width="600" height="450"> </p>
+            </div>
+        </main>
+    </div>
+</section>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</html<!-- FOOTER -->
+  <footer class="container">
+    <p class="float-end"><a href="#">Back to top</a></p>
+    <p>&copy; Jay Sorathia & Zarana Bhalala, (Independent Developers) &middot; <a href="#">Licence and Terms</a> &middot;
+  </footer>
+</main>
+
+
+    <script src="bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+
+  </body>
 </html>

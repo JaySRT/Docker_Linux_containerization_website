@@ -9,30 +9,13 @@
     <meta name="theme-color" content="#7952b3">
     <title>Home</title>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
-
     <!-- Custom styles for this template -->
     <link href="carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="image_slider.css">
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
-
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
 
@@ -59,7 +42,7 @@
                         <a class="nav-link active" href="#">Virtualization vs. Containerization</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Webserver using Docker</a>
+                        <a class="nav-link active" href="docker_webserver.html">Webserver using Docker</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="linux_command.html">Basic Linux Commands</a>
@@ -67,6 +50,7 @@
                     <li class="nav-item">
                         <a class="nav-link active" href="docker_pycharm.html">Connect Docker with Pycharm</a>
                     </li>
+                </ul>
             </div>
         </div>
     </nav>
@@ -74,67 +58,42 @@
 
 <main>
 
-    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
-                    aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-interval="3000">
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="#777"/>
-                </svg>
-
-                <div class="container">
-                    <div class="carousel-caption text-start">
-                        <h1>What is Virtualization?</h1>
-                        <p>A general approach for getting out of in-house hardware assets and employing virtual machines
-                            to do a complex task.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Click here to learn more</a></p>
-                    </div>
+            <div class="carousel-item active" style="background-image: url(images/virtualization.jpeg);">
+                <div class="carousel-caption">
+                    <h1>What is Virtualization?</h1>
+                    <p>A general approach for getting out of in-house hardware assets and employing virtual machines
+                        to do a complex task.</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="#777"/>
-                </svg>
-
-                <div class="container">
-                    <div class="carousel-caption">
-                        <h1>What is containerization?</h1>
-                        <p>A strategy that saves time and space by bringing Virtualization to the OS-level</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Learn more about it</a></p>
-                    </div>
+            <div class="carousel-item" style="background-image: url(images/containerization.jpeg);">
+                <div class="carousel-caption">
+                    <h1>What is containerization?</h1>
+                    <p>A strategy that saves time and space by bringing Virtualization to the OS-level</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                     aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-                    <rect width="100%" height="100%" fill="#777"/>
-                </svg>
-
-                <div class="container">
-                    <div class="carousel-caption text-end">
-                        <h1>What is Docker? How does it compare to Virtualization?</h1>
-                        <p>It is a platform which will help us package an application and all its dependencies together
-                            in the form of containers.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-                    </div>
+            <div class="carousel-item" style="background-image: url(images/virtualvscontain.jpeg);">
+                <div class="carousel-caption">
+                    <h1>What is Docker? How does it compare to Virtualization?</h1>
+                    <p>It is a platform which will help us package an application and all its dependencies together
+                        in the form of containers.</p>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 
 
@@ -255,8 +214,14 @@
 </main>
 
 
-<script src="/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
 
 
